@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Groceries</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container center_div">
+            <div class="row">
+                <h1 align='center';>Groceries</h1>
+				<hr>
+				<!-- The form to add grocery -->
+                <form action="/" method="post" id="todolistForm">
+					<div class="form-group grocery col-md-5">
+					<input type="text" class="form-control input-lg" name="grocery" id="grocery" placeholder="Grocery" autofocus required>
+					</div>
+
+					<div class="form-group quantity col-md-2">
+					<input type="number" min="1" max="10000" class="form-control input-lg" name="quant" id="quant" placeholder="Quantity" autofocus required>
+					</div>
+					<div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="sendTask">Add</button>
+					</div>
+					
+                </form>
+				<br>
+				<p> Groceries: </p>
+                <ul id="todolist"></ul>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/todolist.js"></script>
+    </body>
+</html>
