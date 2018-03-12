@@ -34,7 +34,7 @@ socket.on('addTask', function(data) {
  *
  * @param {int} index
  * @param {string} grocery
- * @param {string} quant
+ * @param {int} quant
  */
 function insertTask(data)
 {
